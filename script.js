@@ -39,9 +39,9 @@ function setDisplayValues(red, green, blue) {
     let greenVal = document.getElementById("greenVal");
     let blueVal = document.getElementById("blueVal");
 
-    redVal.innertext = red;
+    redVal.innerText = red;
     greenVal.innerText = green;
-    blueVal.innertext = blue;
+    blueVal.innerText = blue;
 }
 
 
