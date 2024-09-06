@@ -19,9 +19,9 @@ function setColorPickerEventListeners(element, colors, pickerElements) {
     let pickerLen = pickerElements.length;
     for (let i = 0; i < pickerLen; i++) {
         pickerElements[i].addEventListener('change', () => {
-            let red = rgb.red.value;
-            let green = rgb.green.value;
-            let blue = rgb.blue.value;
+            let red = colors.red.value;
+            let green = colors.green.value;
+            let blue = colors.blue.value;
             setElementBGColor(element, red, green, blue);
             setDisplayValues(red, green, blue)
         });
@@ -30,8 +30,8 @@ function setColorPickerEventListeners(element, colors, pickerElements) {
 }
 
 function setElementBGColor(bgElement, red, green, blue) {
-    let rgbVal = [red, green, blue].join(',')//setting value , background color in css, a string needs to pass string
-    bgElement.style.backgroundColor = "rgb(" + rgbVal +")";
+    let rgbVal = [red, green, blue].join(',');//setting value , background color in css, a string needs to pass string
+    bgElement.style.backgroundColor = "rgb(" + rgbVal + ")";
 }
 
 function setDisplayValues(red, green, blue) {
@@ -40,38 +40,8 @@ function setDisplayValues(red, green, blue) {
     let blueVal = document.getElementById("blueVal");
 
     redVal.innertext = red;
-    redVal.innerText = green;
-    greenVal.innertext = blue;
+    greenVal.innerText = green;
+    blueVal.innertext = blue;
 }
 
 
-
-// function setColorPickerEventListeners(colorBox, rgb, pickerElements) {
-//     let pickerLen = pickerElements.length
-//     for (let i = 0; i < pickerLen; i++) {
-//         pickerElements[i].addEventListener('change', () => {
-//             console.log("Red value: ", rgb.red.value);
-//             let red = rgb.red.value;
-//             let green = rgb.green.value;
-//             let blue = rgb.blue.value;
-//             setBoxBGColor(colorBox, red, green, blue);
-//             setDisplayValues(red, green, blue)
-//         )};
-//     }
-// }
-
-
-// function setBoxBGColor(colorBox, red, green, blue) {
-//     rgbVal = [red, green, blue].join(',');
-//     colorBox.style.backgroundColor = "rgb(" + rgbVal + ")";
-// }
-//
-// function setDisplayValues(red, green, blue) {
-//     let redVal = document.getElementById("redVal");
-//     let greenVal = document.getElementById("greenVal");
-//     let blueVal = document.getElementById("blueVal");
-//
-//     redVal.innerText = red;
-//     greenVal.innerText = green;
-//     blueVal.innerText = blue;
-// }
